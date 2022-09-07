@@ -50,5 +50,8 @@ view: inventory_items {
   measure: count {
     type: count
     drill_fields: [id, products.id, products.item_name, order_items.count]
+    html: {% if value >= 10 %}
+      <font style="color:#D60A15">{{rendered_value}}</font>
+      {% endif %};;
   }
 }
